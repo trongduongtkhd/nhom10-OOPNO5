@@ -102,7 +102,7 @@ public class LoginView extends javax.swing.JFrame
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("<html>Quản lý tình hình dân cư<br> ");
+        jLabel3.setText("<html>Quản lý Phòng Gym<br> ");
         jPanel2.add(jLabel3);
         jLabel3.setBounds(290, 20, 420, 130);
 

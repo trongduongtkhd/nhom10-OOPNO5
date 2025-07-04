@@ -25,7 +25,6 @@ public class LoginController
     private LoginView loginView;
     private ManagerView managerView;
     private MainView mainView;
-    
     public LoginController(LoginView view) 
     {
         this.loginView = view;
