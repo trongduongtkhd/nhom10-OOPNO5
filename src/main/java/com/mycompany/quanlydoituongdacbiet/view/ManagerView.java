@@ -62,7 +62,7 @@ public class ManagerView extends javax.swing.JFrame {
         btnEdit.setEnabled(false);
         btnDelete.setEnabled(false);
         btnSearch.setEnabled(true);
-        lblImage.setIcon(new ImageIcon("default-image.png"));
+        lblImage.setIcon(new ImageIcon("nendacbiet.jpg"));
         tableSpecialPerson.setDefaultRenderer(Object.class, new MyRenderer());
         tableStatistic.setDefaultRenderer(Object.class, new MyRenderer2());
         //jLabel14.setLablFor(new CircleLabel());      
