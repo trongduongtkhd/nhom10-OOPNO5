@@ -865,7 +865,7 @@ public class ResidentView extends javax.swing.JFrame {
         jPanel1.add(jLabel11);
         jLabel11.setBounds(290, 100, 100, 40);
 
-        jLabel9.setIcon(new ImageIcon("src/main/java/com/mycompany/quanlyphonggym/view/Lovepik_com-500330964-blue-blazed-background.jpg"));
+        jLabel9.setIcon(new ImageIcon("src/main/java/com/mycompany/quanlyphonggym/view/anhnen.jpg"));
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.add(jLabel9);
         jLabel9.setBounds(-30, 0, 1640, 890);
