@@ -743,11 +743,14 @@
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Times New Roman" size="16" style="0"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p theo s&#x1ed1; h&#x1ed9; kh&#x1ea9;u"/>
+                <Property name="text" type="java.lang.String" value="S&#x1eaf;p x&#x1ebf;p "/>
                 <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
                   <Color id="Hand Cursor"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="CheckBoxSortIDFamilyActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_InitCodePost" type="java.lang.String" value="CheckBoxSortIDFamily.setOpaque(false);"/>
               </AuxValues>
@@ -1208,7 +1211,7 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="33" green="33" red="33" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="&lt;html&gt;Qu&#x1ea3;n l&#xfd; d&#xe2;n c&#x1b0; huy&#x1ec7;n X&lt;br&gt; "/>
+            <Property name="text" type="java.lang.String" value="&lt;html&gt;Qu&#x1ea3;n l&#xfd; h&#x1ed9;i vi&#xea;n&lt;br&gt; "/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -1346,7 +1349,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Times New Roman" size="18" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="S&#x1ed1; h&#x1ed9; kh&#x1ea9;u:"/>
+            <Property name="text" type="java.lang.String" value="ID h&#x1ed9;i vi&#xea;n:"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

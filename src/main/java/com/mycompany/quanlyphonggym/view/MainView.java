@@ -44,7 +44,7 @@ public class MainView extends javax.swing.JFrame {
         btnChooseSpecialPerson.setBackground(new java.awt.Color(0, 0, 102));
         btnChooseSpecialPerson.setFont(new java.awt.Font("Times New Roman", 0, 36)); // NOI18N
         btnChooseSpecialPerson.setForeground(new java.awt.Color(255, 255, 255));
-        btnChooseSpecialPerson.setText("<html><div style='text-align: center;'>Quản lý các hội viên đặc biệt<br></div>");
+        btnChooseSpecialPerson.setText("<html><div style='text-align: center;'>Quản lý nhân viên<br></div>");
         btnChooseSpecialPerson.setToolTipText("");
         btnChooseSpecialPerson.setBorder(null);
         btnChooseSpecialPerson.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -71,12 +71,11 @@ public class MainView extends javax.swing.JFrame {
 
         jLabel4.setBackground(new java.awt.Color(51, 51, 51));
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 36)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 255, 255));
-        jLabel4.setText("<html>Quản lý Phòng Gym<br> ");
+        jLabel4.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel4.setText("<html>Quản lý phòng Gym<br> ");
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        jLabel9.setForeground(new java.awt.Color(0, 255, 255));
-        jLabel9.setIcon(new ImageIcon("src/main/java/com/mycompany/quanlyphonggym/view/Lovepik_com-500330964-blue-blazed-background.jpg"));
+        jLabel9.setIcon(new ImageIcon("src/main/java/com/mycompany/quanlyphonggym/view/anhnen.jpg"));
         jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -84,15 +83,16 @@ public class MainView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(110, 110, 110)
-                .addComponent(btnChooseResidents, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(55, 55, 55)
-                .addComponent(btnChooseSpecialPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(110, 110, 110)
+                        .addComponent(btnChooseResidents, javax.swing.GroupLayout.PREFERRED_SIZE, 387, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(55, 55, 55)
+                        .addComponent(btnChooseSpecialPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(235, 235, 235)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 581, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(127, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 581, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(99, 99, 99))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 1056, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -101,9 +101,9 @@ public class MainView extends javax.swing.JFrame {
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(113, 113, 113)
+                .addGap(81, 81, 81)
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(67, 67, 67)
+                .addGap(99, 99, 99)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnChooseResidents, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnChooseSpecialPerson, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE))
