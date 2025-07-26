@@ -112,7 +112,7 @@ public class ResidentController
                 try {
                     managerResidents.edit(resident);
                 } catch (ParseException ex) {
-                    Logger.getLogger(SpecialPersonController.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(PTController.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 residentView.showResidents(resident);
                 residentView.showListResidents(managerResidents.getListResidents());
