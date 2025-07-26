@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package com.mycompany.quanlyphonggym.view;
-import com.mycompany.quanlyphonggym.entity.SpecialPerson;
+import com.mycompany.quanlyphonggym.entity.PersonalTrainer;
 import com.raven.chart.Chart;
 import com.raven.chart.ModelChart;
 import java.awt.event.ActionListener;
@@ -25,14 +25,14 @@ import java.util.HashMap;
 import javax.swing.*;
 import java.util.List;
 import java.util.Map;
-import javax.swing.ImageIcon;
-import javax.swing.JOptionPane;
+
 import javax.swing.border.Border;
 import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.JTableHeader;
 import javax.swing.table.TableColumnModel;
+
 /**
  *
  * @author PC
@@ -47,7 +47,7 @@ public class ManagerView extends javax.swing.JFrame {
     private byte[] specialPerson_image=null;
     private byte[] image=null;
     private String [] columnNames = new String [] {
-        "STT", "Họ và tên", "Năm sinh", "Quê quán", "Ngày mở hồ sơ", "Loại đối tượng", "Ảnh"};
+        "STT", "Họ và tên", "Năm sinh", "Quê quán", "Ngày mở hồ sơ", "Chuyên môn","Lịch làm việc","Ảnh"};
     private String [] columnNames2 = new String [] {
         "<none>","Số lượng"};
     private Object data = new Object [][] {};
@@ -239,6 +239,9 @@ public class ManagerView extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         FieldID = new javax.swing.JTextField();
+        ComboBoxType1 = new javax.swing.JComboBox<>();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
 
         SearchDialog.setResizable(false);
         SearchDialog.setSize(new java.awt.Dimension(450, 370));
@@ -624,7 +627,7 @@ public class ManagerView extends javax.swing.JFrame {
 
         btnSortByOpeningDate.setBackground(new java.awt.Color(51, 204, 255));
         btnSortByOpeningDate.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        btnSortByOpeningDate.setText("Sắp xếp theo ngày mở hồ sơ");
+        btnSortByOpeningDate.setText("Sắp xếp theo ngày vào làm");
         btnSortByOpeningDate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnSortByOpeningDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -690,7 +693,7 @@ public class ManagerView extends javax.swing.JFrame {
         jLabel5.setBounds(870, 60, 50, 42);
 
         ComboBoxType.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        ComboBoxType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<none>", "Nghiện hút", "Xâm phạm ANQG", "Có tiền án", "Có tiền sự", "Thường xuyên đánh bạc", "Nhân thân đặc biệt", "Hay tụ tập khiếu kiện" }));
+        ComboBoxType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<none>", "Huấn luyện giảm cân", "Huấn luyện tăng cơ", "Huấn luyện phục hồi chấn thương", "Huấn luyện fitness tổng hợp", "Huấn luyện người lớn tuổi", "Huấn luyện phục hồi chấn thương", "Huấn luyện yoga hoặc thiền" }));
         jPanel1.add(ComboBoxType);
         ComboBoxType.setBounds(930, 270, 260, 45);
         ComboBoxType.setOpaque(false);
@@ -698,7 +701,7 @@ public class ManagerView extends javax.swing.JFrame {
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel13.setText("Tổng số đối tượng:");
         jPanel1.add(jLabel13);
-        jLabel13.setBounds(420, 50, 160, 21);
+        jLabel13.setBounds(380, 30, 160, 21);
 
         btnImage.setBackground(new java.awt.Color(255, 255, 255, 0));
         btnImage.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -720,7 +723,7 @@ public class ManagerView extends javax.swing.JFrame {
         BirthdayChooser.setDateFormatString("dd/MM/yyyy");
         BirthdayChooser.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         jPanel1.add(BirthdayChooser);
-        BirthdayChooser.setBounds(300, 180, 220, 40);
+        BirthdayChooser.setBounds(300, 150, 220, 40);
 
         OpeningDateChooser.setBackground(new java.awt.Color(0, 204, 255));
         OpeningDateChooser.setForeground(new java.awt.Color(102, 255, 255));
@@ -750,24 +753,24 @@ public class ManagerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(FieldSum);
-        FieldSum.setBounds(580, 40, 70, 40);
+        FieldSum.setBounds(540, 20, 70, 40);
         FieldSum.setOpaque(false);
         FieldSum.setEditable(false);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel7.setText("Ngày mở hồ sơ: (dd/MM/yyyy)");
+        jLabel7.setText("Ngày vào làm: (dd/MM/yyyy)");
         jPanel1.add(jLabel7);
         jLabel7.setBounds(200, 270, 250, 42);
 
         jLabel6.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel6.setText("Loại đối tượng:");
+        jLabel6.setText("Chuyên môn:");
         jPanel1.add(jLabel6);
         jLabel6.setBounds(790, 270, 130, 37);
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Họ và tên:");
         jPanel1.add(jLabel1);
-        jLabel1.setBounds(200, 114, 90, 30);
+        jLabel1.setBounds(200, 90, 90, 30);
 
         lblImage.setBackground(new java.awt.Color(153, 153, 153));
         lblImage.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 51, 153)));
@@ -782,13 +785,13 @@ public class ManagerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(FieldName);
-        FieldName.setBounds(300, 110, 220, 40);
+        FieldName.setBounds(300, 80, 220, 40);
         FieldName.setOpaque(false);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel2.setText("ID:");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(200, 50, 60, 21);
+        jLabel2.setBounds(200, 30, 60, 21);
 
         jScrollPane1.setBackground(new java.awt.Color(0, 51, 153, 125));
 
@@ -826,7 +829,7 @@ public class ManagerView extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel3.setText("Ngày sinh:");
         jPanel1.add(jLabel3);
-        jLabel3.setBounds(200, 180, 90, 42);
+        jLabel3.setBounds(200, 150, 90, 42);
 
         FieldID.setEditable(false);
         FieldID.setFont(new java.awt.Font("Times New Roman", 1, 20)); // NOI18N
@@ -838,8 +841,28 @@ public class ManagerView extends javax.swing.JFrame {
             }
         });
         jPanel1.add(FieldID);
-        FieldID.setBounds(260, 38, 70, 40);
+        FieldID.setBounds(240, 20, 70, 40);
         FieldID.setOpaque(false);
+
+        ComboBoxType1.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
+        ComboBoxType1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<none>", "Nghiện hút", "Xâm phạm ANQG", "Có tiền án", "Có tiền sự", "Thường xuyên đánh bạc", "Nhân thân đặc biệt", "Hay tụ tập khiếu kiện" }));
+        jPanel1.add(ComboBoxType1);
+        ComboBoxType1.setBounds(930, 270, 260, 45);
+        ComboBoxType.setOpaque(false);
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sáng", "Chiều", "Tối",  }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jComboBox1);
+        jComboBox1.setBounds(330, 210, 180, 40);
+
+        jLabel9.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel9.setText("Lịch làm việc :");
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(200, 210, 130, 40);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -941,6 +964,10 @@ public class ManagerView extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnStatisticAgeActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -996,7 +1023,7 @@ public class ManagerView extends javax.swing.JFrame {
         }
     }
     
-    public void SpecialPersonImage()
+    public void PTImage()
     {
         String lastImagePath = "";
         JFileChooser chooser=new JFileChooser(lastImagePath);
@@ -1042,13 +1069,13 @@ public class ManagerView extends javax.swing.JFrame {
      * 
      * @param list
      */
-    public void showListSpecialPersons(List<SpecialPerson> list) {
+    public void showPTList(List<PersonalTrainer> list) {
         int size = list.size();
         // với bảng tableSpecialPerson có 6 cột, 
         // khởi tạo mảng 2 chiều specialPersons, trong đó:
         // số hàng: là kích thước của list specialPerson 
         // số cột: là 7
-        Object [][] specialPersons = new Object[size][7];
+        Object [][] specialPersons = new Object[size][8];
         for (int i = 0; i < size; i++) {
             specialPersons[i][0] = list.get(i).getId();
             specialPersons[i][1] = list.get(i).getName();
@@ -1056,15 +1083,16 @@ public class ManagerView extends javax.swing.JFrame {
             specialPersons[i][3] = list.get(i).getAddress();
             specialPersons[i][4] = fDate.format(list.get(i).getOpeningDate());
             specialPersons[i][5] = list.get(i).getType();
-            specialPersons[i][6] = list.get(i).getImage();
+            specialPersons[i][6] = list.get(i).getShift(); // Ca làm việc
+            specialPersons[i][7] = list.get(i).getImage(); // Ảnh
         }
         //jLabel1.setLayout(null);
         tableSpecialPerson.getColumnModel().getColumn(0).setWidth(3);
         tableSpecialPerson.setModel(new DefaultTableModel(specialPersons, columnNames));
-        tableSpecialPerson.removeColumn(tableSpecialPerson.getColumnModel().getColumn(6));
+        // tableSpecialPerson.removeColumn(tableSpecialPerson.getColumnModel().getColumn(6));
     }
     
-    public void showCountListSpecialPersons(List<SpecialPerson> list) {
+    public void showCountPTList(List<PersonalTrainer> list) {
         int size = list.size();
         FieldSum.setText(String.valueOf(size));
     }
@@ -1072,7 +1100,7 @@ public class ManagerView extends javax.swing.JFrame {
      * điền thông tin của hàng được chọn từ bảng specialPerson 
      * vào các trường tương ứng của specialPerson.
      */
-    public void fillSpecialPersonFromSelectedRow() throws ParseException {
+    public void fillPTFromSelectedRow() throws ParseException {
         // lấy chỉ số của hàng được chọn 
         int row = tableSpecialPerson.getSelectedRow();
         if (row >= 0) {
@@ -1081,14 +1109,16 @@ public class ManagerView extends javax.swing.JFrame {
             BirthdayChooser.setDate(fDate.parse(tableSpecialPerson.getModel().getValueAt(row, 2).toString()));
             TextAreaAddress.setText(tableSpecialPerson.getModel().getValueAt(row, 3).toString());
             //FieldOpeningDate.setText(tableSpecialPerson.getModel().getValueAt(row, 4).toString());
+            jComboBox1.setSelectedItem(tableSpecialPerson.getModel().getValueAt(row, 6).toString()); // Ca làm việc
             OpeningDateChooser.setDate(fDate.parse(tableSpecialPerson.getModel().getValueAt(row, 4).toString()));
             ComboBoxType.setSelectedItem(tableSpecialPerson.getModel().getValueAt(row, 5).toString());
             //ImageIcon imageIcon=new ImageIcon(new ImageIcon(image).getImage().getScaledInstance(lblImage.getWidth(), lblImage.getHeight(), Image.SCALE_SMOOTH));
             //lblImage.setIcon((Icon) tableSpecialPerson.getModel().getValueAt(row, 6));
-            byte[] img=(byte[]) tableSpecialPerson.getModel().getValueAt(row, 6);
-            specialPerson_image=img;
-            ImageIcon imageIcon=new ImageIcon(new ImageIcon(img).getImage().getScaledInstance(lblImage.getWidth(), lblImage.getHeight(), Image.SCALE_SMOOTH));
+            byte[] img = (byte[]) tableSpecialPerson.getModel().getValueAt(row, 7);
+            ImageIcon imageIcon = new ImageIcon(new ImageIcon(img).getImage().getScaledInstance(lblImage.getWidth(), lblImage.getHeight(), Image.SCALE_SMOOTH));
             lblImage.setIcon(imageIcon);
+            specialPerson_image = img; // Lưu ảnh vào biến toàn cục
+
             // enable Edit and Delete buttons
             btnEdit.setEnabled(true);
             btnDelete.setEnabled(true);
@@ -1101,7 +1131,7 @@ public class ManagerView extends javax.swing.JFrame {
     /**
      * xóa thông tin specialPerson
      */
-    public void clearSpecialPersonInfo() {
+    public void clearPTInfo() {
         FieldID.setText("");
         FieldName.setText("");
         BirthdayChooser.setDate(null);
@@ -1111,6 +1141,7 @@ public class ManagerView extends javax.swing.JFrame {
         lblImage.setIcon(new ImageIcon("default-image.png")); 
         specialPerson_image=null;
         ComboBoxType.setSelectedItem("<none>");
+        jComboBox1.setSelectedItem("<none>"); // Xóa ca làm việc
         // disable Edit and Delete buttons
         btnEdit.setEnabled(false);
         btnDelete.setEnabled(false);
@@ -1118,7 +1149,7 @@ public class ManagerView extends javax.swing.JFrame {
         btnAdd.setEnabled(true);
     }
     
-    public void searchNameSpecialPersonInfo() {
+    public void searchNamePTInfo() {
         //FrameSearch = new ManagerView();
         SearchDialog.setVisible(true);
     }
@@ -1135,7 +1166,7 @@ public class ManagerView extends javax.swing.JFrame {
         });
     }
     
-    public void cancelDialogSearchSpecialPersonInfo() {
+    public void cancelDialogSearchPTInfo() {
         //FrameSearch = new ManagerView();
         SearchDialog.setVisible(false);
     }
@@ -1145,7 +1176,7 @@ public class ManagerView extends javax.swing.JFrame {
      * 
      * @param specialPerson
      */
-    public void showSpecialPerson(SpecialPerson specialPerson) 
+    public void showPT(PersonalTrainer specialPerson) 
     {
         FieldID.setText("" + specialPerson.getId());
         FieldName.setText(specialPerson.getName());
@@ -1169,29 +1200,38 @@ public class ManagerView extends javax.swing.JFrame {
      * 
      * @return
      */
-    public SpecialPerson getSpecialPersonInfo() {
+    public PersonalTrainer getPTInput() {
         // validate specialPerson
-        if (!validateName() || !validateYear() || !validateAddress() || !validateImage() || !validateOpeningDate() || !validateType()) {
+        if (!validateName() || !validateYear() || !validateAddress() || !validateImage() || !validateOpeningDate() || !validateType() || !validateShift()) {
             return null;
         }
         try {
-            SpecialPerson specialPerson = new SpecialPerson();
+            PersonalTrainer personTrainer = new PersonalTrainer();
             if (FieldID.getText() != null && !"".equals(FieldID.getText())) {
-                specialPerson.setId(Integer.parseInt(FieldID.getText()));
+                personTrainer.setId(Integer.parseInt(FieldID.getText()));
             }
-            specialPerson.setName(capitalizeWords(FieldName.getText().trim()));
-            specialPerson.setBirthday(BirthdayChooser.getDate());
-            specialPerson.setAddress(capitalizeWords(TextAreaAddress.getText().trim()));
-            specialPerson.setOpeningDate(OpeningDateChooser.getDate());
-            specialPerson.setType(ComboBoxType.getSelectedItem().toString().trim());
-            specialPerson.setImage(specialPerson_image);
-            return specialPerson;
+             personTrainer.setName(capitalizeWords(FieldName.getText().trim()));
+             personTrainer.setBirthday(BirthdayChooser.getDate());
+             personTrainer.setAddress(capitalizeWords(TextAreaAddress.getText().trim()));
+             personTrainer.setOpeningDate(OpeningDateChooser.getDate());
+             personTrainer.setType(ComboBoxType.getSelectedItem().toString().trim());
+             personTrainer.setImage(specialPerson_image);
+             personTrainer.setShift(jComboBox1.getSelectedItem().toString().trim());
+            return  personTrainer;
         } catch (Exception e) {
             showMessage(e.getMessage());
         }
         return null;
     }
-      
+   private boolean validateShift() {
+    String shift = jComboBox1.getSelectedItem().toString().trim();
+    if (shift.equals("") || shift.equals("<none>")) {
+        jComboBox1.requestFocus();
+        showMessage("Bạn chưa chọn lịch làm việc cho PT!");
+        return false;
+    }
+    return true;
+}
     private boolean validateName() {
         String name = FieldName.getText();
         if (name == null || "".equals(name.trim())) {
@@ -1206,7 +1246,7 @@ public class ManagerView extends javax.swing.JFrame {
         String type = ComboBoxType.getSelectedItem().toString().trim();
         if (type.equals("<none>")) {
             ComboBoxType.requestFocus();
-            showMessage("Bạn chưa chọn loại đối tượng");
+            showMessage("Bạn chưa chọn chuyên môn của PT");
             return false;
         }
         return true;
@@ -1289,7 +1329,7 @@ public class ManagerView extends javax.swing.JFrame {
         return search;
     }
     
-    public void cancelSearchSpecialPerson()
+    public void cancelSearchID_PT()
     {
         String id=FieldID.getText();
         btnCancelSearch.setEnabled(false);
@@ -1310,7 +1350,7 @@ public class ManagerView extends javax.swing.JFrame {
         }
     }
     
-    public void UnderViewSpecialPerson()
+    public void UnderViewPT()
     {
         StatisticView.setVisible(false);
         ManagerView.this.setVisible(true);
@@ -1333,10 +1373,10 @@ public class ManagerView extends javax.swing.JFrame {
         return true;
     }*/
     
-    public void showStatisticTypeSpecialPersons(List<SpecialPerson> list) {
+    public void showStatisticTypePT(List<PersonalTrainer> list) {
         //tableStatistic=new JTable();
-        lblTable.setText("Thống kê số lượng theo loại đối tượng");
-        lblChart.setText("Biểu đồ thống kê số lượng theo loại đối tượng");
+        lblTable.setText("Thống kê số lượng theo chuyên môn");
+        lblChart.setText("Biểu đồ thống kê số lượng theo chuyên môn");
         chart1.clear();
         int size1 = 18;
         if (tableStatistic.getRowCount()>10){
@@ -1345,13 +1385,13 @@ public class ManagerView extends javax.swing.JFrame {
         chart1.setFont(new java.awt.Font("sansserif", 0, size1)); 
         int size = ComboBoxType.getItemCount();
         columnNames2 = new String [] {
-        "Loại đối tượng","Số lượng"};
+        "Chuyên môn","Số lượng"};
         // với bảng tableSpecialPerson có 6 cột, 
         // khởi tạo mảng 2 chiều specialPersons, trong đó:
         // số hàng: là kích thước của list specialPerson 
         // số cột: là 7
         Map<String, Integer> countMap = new HashMap<>();
-        for (SpecialPerson person : list) {
+        for (PersonalTrainer person : list) {
             if (countMap.containsKey(person.getType())) {
                 int count = countMap.get(person.getType());
                 countMap.put(person.getType(), count + 1);
@@ -1372,7 +1412,7 @@ public class ManagerView extends javax.swing.JFrame {
         chart1.start();
     }
     
-    public void showStatisticAgeSpecialPersons(List<SpecialPerson> list) {
+    public void showStatisticAgePT(List<PersonalTrainer> list) {
         java.util.Date referenceDate=new java.util.Date();
         //tableStatistic=new JTable();
         lblTable.setText("Thống kê số lượng theo tuổi");
@@ -1388,7 +1428,7 @@ public class ManagerView extends javax.swing.JFrame {
         int size = ComboBoxType.getItemCount();
         columnNames2 = new String[]{"Tuổi", "Số lượng"};
         Map<Integer, Integer> countMap = new HashMap<>();
-        for (SpecialPerson person : list) {
+        for (PersonalTrainer person : list) {
             int age = calculateAge(person.getBirthday(), referenceDate);
             if (countMap.containsKey(age)) {
                 int count = countMap.get(age);
@@ -1431,15 +1471,15 @@ public class ManagerView extends javax.swing.JFrame {
         return Double.valueOf(k.toString());
     }
     
-    public void addAddSpecialPersonListener(ActionListener listener) {
+    public void addAddPTListener(ActionListener listener) {
         btnAdd.addActionListener(listener);
     }
     
-    public void addEditSpecialPersonListener(ActionListener listener) {
+    public void addEditPTListener(ActionListener listener) {
         btnEdit.addActionListener(listener);
     }
     
-    public void addDeleteSpecialPersonListener(ActionListener listener) {
+    public void addDeletePTListener(ActionListener listener) {
         btnDelete.addActionListener(listener);
     }
     
@@ -1471,19 +1511,19 @@ public class ManagerView extends javax.swing.JFrame {
         btnSearchDialog.addActionListener(listener);
     }
     
-    public void addListSpecialPersonSelectionListener(ListSelectionListener listener) {
+    public void addListPTSelectionListener(ListSelectionListener listener) {
         tableSpecialPerson.getSelectionModel().addListSelectionListener(listener);
     }
     
-    public void addSearchDiaLogSpecialPersonListener(ActionListener listener){
+    public void addSearchDiaLogPTListener(ActionListener listener){
         btnSearchDialog.addActionListener(listener);
     }
     
-    public void addCancelSearchSpecialPersonListener(ActionListener listener){
+    public void addCancelSearchPTListener(ActionListener listener){
         btnCancelSearch.addActionListener(listener);
     }
     
-    public void addImageSpecialPersonListener(ActionListener listener){
+    public void addImagePTListener(ActionListener listener){
         btnImage.addActionListener(listener);
     }
     
@@ -1516,6 +1556,7 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JCheckBox CheckBoxName;
     private javax.swing.JCheckBox CheckBoxYear;
     private javax.swing.JComboBox<String> ComboBoxType;
+    private javax.swing.JComboBox<String> ComboBoxType1;
     private javax.swing.JTextField FieldID;
     private javax.swing.JTextField FieldName;
     private javax.swing.JTextField FieldSearch;
@@ -1545,6 +1586,7 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JButton btnStatisticType;
     private javax.swing.JButton btnStatisticUnder;
     private com.raven.chart.Chart chart1;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1559,6 +1601,7 @@ public class ManagerView extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;

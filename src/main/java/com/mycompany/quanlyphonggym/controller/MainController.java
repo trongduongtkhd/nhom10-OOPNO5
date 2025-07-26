@@ -4,8 +4,8 @@
  */
 package com.mycompany.quanlyphonggym.controller;
 
-import com.mycompany.quanlyphonggym.action.ManagerSpecialPerson;
-import com.mycompany.quanlyphonggym.entity.SpecialPerson;
+import com.mycompany.quanlyphonggym.action.PTManagement;
+import com.mycompany.quanlyphonggym.entity.PersonalTrainer;
 import com.mycompany.quanlyphonggym.view.LoginView;
 import com.mycompany.quanlyphonggym.view.MainView;
 import com.mycompany.quanlyphonggym.view.ManagerView;
@@ -40,7 +40,7 @@ public class MainController
         public void actionPerformed(ActionEvent e) 
         {
             managerView = new ManagerView();
-            SpecialPersonController managerController = new SpecialPersonController(managerView);
+            PTController managerController = new PTController(managerView);
             managerController.showManagerView();
             mainView.setVisible(false);
         }
