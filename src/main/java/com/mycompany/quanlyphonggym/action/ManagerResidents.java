@@ -4,10 +4,10 @@
  */
 package com.mycompany.quanlyphonggym.action;
 
-import com.mycompany.quanlyphonggym.entity.ResidentXML;
-import com.mycompany.quanlyphonggym.entity.Residents;
+import com.mycompany.quanlyphonggym.entity.GymMemberXML;
+import com.mycompany.quanlyphonggym.entity.GymMember;
 import com.mycompany.quanlyphonggym.utils.FileUtils;
-import com.mycompany.quanlyphonggym.view.ResidentView;
+import com.mycompany.quanlyphonggym.view.GymMemberView;
 import java.text.Collator;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -24,23 +24,22 @@ import javax.swing.JOptionPane;
  */
 public class ManagerResidents 
 {
-    private static final String RESIDENT_FILE_NAME = "Residents.xml";
-    private List<Residents> listResidents;
-    private ResidentView residentView;
+    private static final String RESIDENT_FILE_NAME = "GymMember.xml";
+    private List<GymMember> listResidents;
+    private GymMemberView residentView;
     
     public ManagerResidents()
     {
         this.listResidents = readListResidents();
         if (listResidents == null) {
-            listResidents = new ArrayList<Residents>();
+            listResidents = new ArrayList<GymMember>();
         }
     }
     
-    public List<Residents> readListResidents() 
+    public List<GymMember> readListResidents() 
     {
-        List<Residents> list = new ArrayList<Residents>();
-        ResidentXML residentXML = (ResidentXML) FileUtils.readXMLFile(
-                RESIDENT_FILE_NAME, ResidentXML.class);
+        List<GymMember> list = new ArrayList<GymMember>();
+        GymMemberXML residentXML = (GymMemberXML)FileUtils.readXMLFile(RESIDENT_FILE_NAME, GymMemberXML.class);
         if (residentXML != null) 
         {
             list = residentXML.getResidents();
@@ -48,16 +47,16 @@ public class ManagerResidents
         return list;
     }
     
-    public void writeListResidents(List<Residents> residents) 
+    public void writeListResidents(List<GymMember> residents) 
     {
-        ResidentXML residentXML = new ResidentXML();
+        GymMemberXML residentXML = new GymMemberXML();
         residentXML.setResidents(residents);
         FileUtils.writeXMLtoFile(RESIDENT_FILE_NAME, residentXML);
     }
     
-    public List<Residents> searchResidentName(String search){
-        List<Residents>temp = new ArrayList<Residents>();
-        for(Residents person : listResidents){
+    public List<GymMember> searchResidentName(String search){
+        List<GymMember>temp = new ArrayList<GymMember>();
+        for(GymMember person : listResidents){
             if(person.getName().toLowerCase().contains(search.toLowerCase())){
                 temp.add(person);
             }
@@ -66,9 +65,9 @@ public class ManagerResidents
     }
     
     /* Hiển thị listSpecialPersons theo nơi ở */
-    public List<Residents> searchResidentAddress(String search){
-        List<Residents>temp = new ArrayList<Residents>();
-        for(Residents person : listResidents){
+    public List<GymMember> searchResidentAddress(String search){
+        List<GymMember>temp = new ArrayList<GymMember>();
+        for(GymMember person : listResidents){
             if(person.getAddress().toLowerCase().contains(search.toLowerCase())){
                 temp.add(person);
             }
@@ -76,9 +75,9 @@ public class ManagerResidents
         return temp;
     }
     
-    public List<Residents> searchResidentIDFamily(String search){
-        List<Residents>temp = new ArrayList<Residents>();
-        for(Residents person : listResidents){
+    public List<GymMember> searchResidentIDFamily(String search){
+        List<GymMember>temp = new ArrayList<GymMember>();
+        for(GymMember person : listResidents){
             if(person.getIDFamily().contains(search)){
                 temp.add(person);
             }
@@ -86,11 +85,11 @@ public class ManagerResidents
         return temp;
     }
      /* Hiển thị listSpecialPersons theo năm sinh */
-    public List<Residents> searchResidentYear(String year) {
-        List<Residents> temp = new ArrayList<>();
+    public List<GymMember> searchResidentYear(String year) {
+        List<GymMember> temp = new ArrayList<>();
         SimpleDateFormat yearFormat = new SimpleDateFormat("yyyy");
 
-        for (Residents person : listResidents) {
+        for (GymMember person : listResidents) {
             // Chuyển đổi ngày sinh thành chuỗi năm
             String personYearStr = yearFormat.format(person.getBirthday());
 
@@ -103,7 +102,7 @@ public class ManagerResidents
         return temp;
     }
     
-    public void add(Residents resident) 
+    public void add(GymMember resident) 
     {
         int max = 0;
         for (int i=0;i<listResidents.size();i++)
@@ -136,9 +135,9 @@ public class ManagerResidents
     }*/
     
     // Hàm kiểm tra số CMT không trùng
-    public boolean isCMTUnique(Residents resident) {
+    public boolean isCMTUnique(GymMember resident) {
         String cmt=resident.getCMT();
-        for (Residents existingResident : listResidents) {
+        for (GymMember existingResident : listResidents) {
             if (existingResident.getCMT().equals(cmt)) {
                 return false; // Trùng số CMT
             }
@@ -147,10 +146,10 @@ public class ManagerResidents
     }
 
     // Hàm kiểm tra số hộ khẩu không trùng cho vai trò "Chủ hộ"
-    public boolean isHouseholdUnique(Residents resident) {
+    public boolean isHouseholdUnique(GymMember resident) {
         String IDFamily=resident.getIDFamily();
         String role = resident.getRole();
-        for (Residents existingResident : listResidents) {
+        for (GymMember existingResident : listResidents) {
             if ("Chủ hộ".equals(role) && existingResident.getIDFamily().equals(IDFamily) && existingResident.getRole().equals(role)) {
                 return false; // Trùng số hộ khẩu cho vai trò "Chủ hộ"
             }
@@ -162,7 +161,7 @@ public class ManagerResidents
         JOptionPane.showMessageDialog(residentView, message);
     }
     
-    public void edit(Residents resident) throws ParseException 
+    public void edit(GymMember resident) throws ParseException 
     {
         SimpleDateFormat fDate=new SimpleDateFormat("dd/MM/yyyy");
         int size = listResidents.size();
@@ -187,33 +186,28 @@ public class ManagerResidents
         }
     }
     
-    public boolean delete(Residents resident) {
-        boolean isFound = false;
-        int size = listResidents.size();
-        for (int i = 0; i < size; i++) {
-            if (listResidents.get(i).getId() == resident.getId()) {
-                listResidents.remove(i);
-                isFound = true;
-                break;
-            }
+    public boolean delete(GymMember resident) {
+    boolean isFound = false;
+    for (int i = 0; i < listResidents.size(); i++) {
+        // So sánh cả ID và mã hộ khẩu để chắc chắn
+        if (listResidents.get(i).getId() == resident.getId()) {
+            listResidents.remove(i);
+            isFound = true;
+            break;
         }
-        if (isFound) {
-            // Cập nhật lại ID của các đối tượng sau
-            for (int i = 0; i < listResidents.size(); i++) {
-                if (listResidents.get(i).getId() > resident.getId()) {
-                    listResidents.get(i).setId(listResidents.get(i).getId() - 1);
-                }
-            }
-            writeListResidents(listResidents);
-            return true;
-        }
-        return false;
     }
+    if (isFound) {
+        // Không cần cập nhật lại ID nếu bạn dùng ID tự tăng, chỉ cần ghi lại danh sách
+        writeListResidents(listResidents);
+        return true;
+    }
+    return false;
+}
     
     public void sortResidentsByName() 
     {
-        Collections.sort(listResidents, new Comparator<Residents>() {
-            public int compare(Residents p1, Residents p2) {
+        Collections.sort(listResidents, new Comparator<GymMember>() {
+            public int compare(GymMember p1, GymMember p2) {
                 Collator collator = Collator.getInstance(new Locale("vi", "VN"));
                 // So sánh tên
                 int result = collator.compare(p1.getLastName(), p2.getLastName());
@@ -228,8 +222,8 @@ public class ManagerResidents
     }
     
     public void sortResidentsByIDFamily() {
-        Collections.sort(listResidents, new Comparator<Residents>() {
-            public int compare(Residents person1, Residents person2) {
+        Collections.sort(listResidents, new Comparator<GymMember>() {
+            public int compare(GymMember person1, GymMember person2) {
                 return person1.getIDFamily().compareTo(person2.getIDFamily());
             }
         });
@@ -237,9 +231,9 @@ public class ManagerResidents
     
     public void sortResidentsByID() 
     {
-        Collections.sort(listResidents, new Comparator<Residents>() 
+        Collections.sort(listResidents, new Comparator<GymMember>() 
         {
-            public int compare(Residents person1, Residents person2) 
+            public int compare(GymMember person1, GymMember person2) 
             {
                 if (person1.getId() > person2.getId()) 
                 {
@@ -250,7 +244,7 @@ public class ManagerResidents
         });
     }
     
-    public List<Residents> getListResidents() 
+    public List<GymMember> getListResidents() 
     {
         return this.listResidents;
     }

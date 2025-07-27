@@ -9,7 +9,7 @@ import com.mycompany.quanlyphonggym.entity.PersonalTrainer;
 import com.mycompany.quanlyphonggym.view.LoginView;
 import com.mycompany.quanlyphonggym.view.MainView;
 import com.mycompany.quanlyphonggym.view.ManagerView;
-import com.mycompany.quanlyphonggym.view.ResidentView;
+import com.mycompany.quanlyphonggym.view.GymMemberView;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
@@ -22,7 +22,7 @@ public class MainController
 {
     private LoginView loginView;
     private ManagerView managerView;
-    private ResidentView residentView;
+    private GymMemberView residentView;
     private MainView mainView;
     
     public MainController(MainView view)
@@ -50,8 +50,8 @@ public class MainController
     {
         public void actionPerformed(ActionEvent e) 
         {
-            residentView = new ResidentView();
-            ResidentController residentController = new ResidentController(residentView);
+            residentView = new GymMemberView();
+            MemberController residentController = new MemberController(residentView);
             residentController.showManagerView();
             mainView.setVisible(false);
         }

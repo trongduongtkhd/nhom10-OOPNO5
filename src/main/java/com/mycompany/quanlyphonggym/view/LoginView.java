@@ -91,7 +91,7 @@ public class LoginView extends javax.swing.JFrame
         jScrollPane1.setViewportView(jTextPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản lý tình hình dân cư trong khu vực");
+        setTitle("Quản lý phòng Gym");
         setBackground(new java.awt.Color(204, 51, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setIconImages(null);

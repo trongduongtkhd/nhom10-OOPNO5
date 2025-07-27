@@ -472,7 +472,7 @@ public class ManagerView extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản lý các đối tượng đặc biệt trong khu vực");
+        setTitle("Quản lý PT");
         setName("ManagerFrame"); // NOI18N
         setResizable(false);
 
@@ -693,7 +693,7 @@ public class ManagerView extends javax.swing.JFrame {
         jLabel5.setBounds(870, 60, 50, 42);
 
         ComboBoxType.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        ComboBoxType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<none>", "Huấn luyện giảm cân", "Huấn luyện tăng cơ", "Huấn luyện phục hồi chấn thương", "Huấn luyện fitness tổng hợp", "Huấn luyện người lớn tuổi", "Huấn luyện phục hồi chấn thương", "Huấn luyện yoga hoặc thiền" }));
+        ComboBoxType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<none>", "MMA","Boxing","Yoga","Gym",}));
         jPanel1.add(ComboBoxType);
         ComboBoxType.setBounds(930, 270, 260, 45);
         ComboBoxType.setOpaque(false);
