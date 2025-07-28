@@ -481,7 +481,7 @@ public class GymMemberView extends javax.swing.JFrame {
 
         btnGroupSort.add(CheckBoxSortIDFamily);
         CheckBoxSortIDFamily.setFont(new java.awt.Font("Times New Roman", 0, 16)); // NOI18N
-        CheckBoxSortIDFamily.setText("Sắp xếp ");
+        CheckBoxSortIDFamily.setText("Sắp xếp theo gói tập ");
         CheckBoxSortIDFamily.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         CheckBoxSortIDFamily.setOpaque(false);
         CheckBoxSortIDFamily.addActionListener(new java.awt.event.ActionListener() {

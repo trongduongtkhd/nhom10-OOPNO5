@@ -221,14 +221,26 @@ public class ManagerResidents
         //Collections.sort(listSpecialPersons, (p1, p2) -> collator.compare(p1.getLastName(), p2.getLastName()));
     }
     
-    public void sortResidentsByIDFamily() {
-        Collections.sort(listResidents, new Comparator<GymMember>() {
-            public int compare(GymMember person1, GymMember person2) {
-                return person1.getIDFamily().compareTo(person2.getIDFamily());
+   public void sortResidentsByIDFamily() {
+    Collections.sort(listResidents, new Comparator<GymMember>() {
+        public int compare(GymMember person1, GymMember person2) {
+            // Lấy số tháng từ chuỗi IDFamily, ví dụ: "3 tháng" -> 3
+            int month1 = extractMonth(person1.getIDFamily());
+            int month2 = extractMonth(person2.getIDFamily());
+            return Integer.compare(month1, month2);
+        }
+
+        private int extractMonth(String idFamily) {
+            try {
+                // Tách số đầu tiên xuất hiện trong chuỗi
+                return Integer.parseInt(idFamily.replaceAll("[^0-9]", ""));
+            } catch (Exception e) {
+                return 0; // Nếu lỗi thì mặc định là 0
             }
-        });
-    }
-    
+        }
+    });
+}
+
     public void sortResidentsByID() 
     {
         Collections.sort(listResidents, new Comparator<GymMember>() 
