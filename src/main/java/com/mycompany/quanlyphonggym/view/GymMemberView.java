@@ -274,7 +274,7 @@ public class GymMemberView extends javax.swing.JFrame {
 
         btnGroupSearch.add(CheckBoxYear);
         CheckBoxYear.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        CheckBoxYear.setText("Năm sinh");
+        CheckBoxYear.setText("Ngày bắt đầu");
         CheckBoxYear.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         CheckBoxYear.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -287,7 +287,7 @@ public class GymMemberView extends javax.swing.JFrame {
 
         btnGroupSearch.add(CheckBoxIDFamily);
         CheckBoxIDFamily.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
-        CheckBoxIDFamily.setText("Số hộ khẩu");
+        CheckBoxIDFamily.setText("gói tập");
         CheckBoxIDFamily.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel3.add(CheckBoxIDFamily);
         CheckBoxIDFamily.setBounds(20, 230, 120, 25);
@@ -438,7 +438,7 @@ public class GymMemberView extends javax.swing.JFrame {
         jLabel3.setText("Số người có CCCD:");
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabel12.setText("Tổng số hộ dân:");
+        jLabel12.setText("Tổng số gói tập:");
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jLabel13.setText("Số người có CMND:");
@@ -453,7 +453,7 @@ public class GymMemberView extends javax.swing.JFrame {
         });
 
         jLabel17.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabel17.setText("Tổng dân số:");
+        jLabel17.setText("Tổng hội viên:");
 
         FieldSum.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         FieldSum.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 51, 102)));

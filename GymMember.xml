@@ -26,31 +26,4 @@
         <CMT>03020521332</CMT>
         <phoneNumber>039325435</phoneNumber>
     </residents>
-    <residents>
-        <address>Cầu Giấy</address>
-        <birthday>2025-07-05T00:00:00+07:00</birthday>
-        <id>3</id>
-        <name>Nguyễn Thị Hà</name>
-        <IDMember>12 tháng</IDMember>
-        <sex>Nữ</sex>
-        <GoiTap>Yoga</GoiTap>
-        <birthPlace>Minh Đức</birthPlace>
-        <typeCMT>CMND</typeCMT>
-        <CMT>023485790</CMT>
-        <phoneNumber>03532415431</phoneNumber>
-    </residents>
-    <residents>
-        <address>Hoàng Mai</address>
-        <birthday>2025-07-26T01:29:31.353+07:00</birthday>
-        <id>4</id>
-        <name>Hoàng Thị Thủy</name>
-        <IDMember>3 tháng</IDMember>
-        <sex>Nữ</sex>
-        <GoiTap>Yoga</GoiTap>
-        <birthPlace>Hà Nội</birthPlace>
-        <typeCMT>Định danh</typeCMT>
-        <CMT>03235645454</CMT>
-        <phoneNumber>0305234332</phoneNumber>
-    </residents>
-    
 </GymMember>

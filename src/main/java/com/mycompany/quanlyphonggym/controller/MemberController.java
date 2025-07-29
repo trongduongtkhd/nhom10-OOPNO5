@@ -4,8 +4,8 @@
  */
 package com.mycompany.quanlyphonggym.controller;
 
-import com.mycompany.quanlyphonggym.action.ManagerResidents;
-import com.mycompany.quanlyphonggym.action.ManagerResidents;
+import com.mycompany.quanlyphonggym.action.ManagerMember;
+import com.mycompany.quanlyphonggym.action.ManagerMember;
 import com.mycompany.quanlyphonggym.entity.GymMember;
 import com.mycompany.quanlyphonggym.entity.GymMember;
 import com.mycompany.quanlyphonggym.view.LoginView;
@@ -32,12 +32,12 @@ public class MemberController
     private ManagerView managerView;
     private GymMemberView residentView;
     private MainView mainView;
-    private ManagerResidents managerResidents;
+    private ManagerMember managerResidents;
     
     public MemberController(GymMemberView view)
     {
         this.residentView=view;
-        this.managerResidents = new ManagerResidents();
+        this.managerResidents = new ManagerMember();
         view.addUndoListener(new UndoListener());
         view.addAddResidentListener(new AddResidentListener());
         view.addListResidentSelectionListener(new ListResidentsSelectionListener());

@@ -22,13 +22,13 @@ import javax.swing.JOptionPane;
  *
  * @author PC
  */
-public class ManagerResidents 
+public class ManagerMember 
 {
     private static final String RESIDENT_FILE_NAME = "GymMember.xml";
     private List<GymMember> listResidents;
     private GymMemberView residentView;
     
-    public ManagerResidents()
+    public ManagerMember()
     {
         this.listResidents = readListResidents();
         if (listResidents == null) {

@@ -15,6 +15,7 @@ com\mycompany\quanlyphonggym\controller\LoginController$LoginListener.class
 com\mycompany\quanlyphonggym\controller\PTController$EditPTListener.class
 com\mycompany\quanlyphonggym\view\GymMemberView$24.class
 com\raven\main\Main$1.class
+com\mycompany\quanlyphonggym\action\ManagerMember$3.class
 com\mycompany\quanlyphonggym\controller\MemberController$AddResidentListener.class
 com\raven\chart\blankchart\NiceScale.class
 com\mycompany\quanlyphonggym\action\PTManagement$4.class
@@ -37,7 +38,6 @@ com\mycompany\quanlyphonggym\controller\PTController$CancelDialogSearchPTListene
 com\mycompany\quanlyphonggym\controller\PTController$SortPT_IDListener.class
 com\mycompany\quanlyphonggym\view\ManagerView$21.class
 com\mycompany\quanlyphonggym\view\GymMemberView$23.class
-com\mycompany\quanlyphonggym\action\ManagerResidents.class
 com\mycompany\quanlyphonggym\view\MainView$2.class
 com\mycompany\quanlyphonggym\controller\MemberController$ListResidentsSelectionListener.class
 com\mycompany\quanlyphonggym\controller\PTController$ListPTSelectionListener.class
@@ -69,7 +69,6 @@ com\mycompany\quanlyphonggym\view\GymMemberView$18.class
 com\mycompany\quanlyphonggym\action\CheckLogin.class
 com\mycompany\quanlyphonggym\view\ManagerView$2.class
 com\mycompany\quanlyphonggym\view\GymMemberView$RoundedBorder.class
-com\mycompany\quanlyphonggym\action\ManagerResidents$3.class
 com\mycompany\quanlyphonggym\view\GymMemberView$15.class
 com\mycompany\quanlyphonggym\QuanLyDoiTuong\QuanLyDoiTuongDacBiet$1.class
 com\raven\chart\blankchart\SeriesSize.class
@@ -88,11 +87,13 @@ com\mycompany\quanlyphonggym\view\ManagerView$13.class
 com\mycompany\quanlyphonggym\view\ManagerView$MyRenderer.class
 com\mycompany\quanlyphonggym\controller\MemberController$UndoListener.class
 com\mycompany\quanlyphonggym\view\ManagerView$10.class
+com\mycompany\quanlyphonggym\action\ManagerMember$1.class
 com\mycompany\quanlyphonggym\controller\PTController$CancelSearchPTListener.class
 com\raven\main\Main.class
 com\mycompany\quanlyphonggym\view\ManagerView$1.class
 com\mycompany\quanlyphonggym\view\GymMemberView$22.class
 com\mycompany\quanlyphonggym\view\GymMemberView.class
+com\mycompany\quanlyphonggym\action\ManagerMember.class
 com\mycompany\quanlyphonggym\view\GymMemberView$MyRenderer2.class
 com\mycompany\quanlyphonggym\controller\PTController$StatisticPTAgeListener.class
 com\mycompany\quanlyphonggym\view\GymMemberView$10.class
@@ -103,8 +104,8 @@ com\mycompany\quanlyphonggym\controller\PTController$DeletePTListener.class
 com\raven\chart\Chart$1.class
 com\raven\chart\Chart.class
 com\mycompany\quanlyphonggym\view\ManagerView$11.class
-com\mycompany\quanlyphonggym\action\ManagerResidents$1.class
 com\raven\chart\blankchart\BlankPlotChart.class
+com\mycompany\quanlyphonggym\action\ManagerMember$2.class
 com\mycompany\quanlyphonggym\controller\PTController$SortPTYearListener.class
 com\mycompany\quanlyphonggym\controller\MemberController$CancelDialogSearchResidentListener.class
 com\mycompany\quanlyphonggym\entity\GymMemberXML.class
@@ -123,7 +124,6 @@ com\raven\main\Main$2.class
 com\mycompany\quanlyphonggym\view\GymMemberView$4.class
 com\mycompany\quanlyphonggym\controller\PTController$SearchPTListener.class
 com\mycompany\quanlyphonggym\view\ManagerView$12.class
-com\mycompany\quanlyphonggym\action\ManagerResidents$2.class
 com\mycompany\quanlyphonggym\view\LoginView.class
 com\mycompany\quanlyphonggym\view\ManagerView$24.class
 com\mycompany\quanlyphonggym\view\ManagerView$5.class
