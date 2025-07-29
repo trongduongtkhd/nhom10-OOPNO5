@@ -22,11 +22,15 @@
 + Quản lý PT: Thêm, sửa, xóa, tìm kiếm, sắp xếp, thông kê.. thông tin PT
 
 
-## Tổng hợp Use case:
-<img width="874" height="815" alt="image" src="https://github.com/user-attachments/assets/8c052326-225f-42a7-9ece-642ebb971414" />
 
-## Biểu đồ lớp (class diagram):
-<img width="975" height="700" alt="image" src="https://github.com/user-attachments/assets/13e14733-c964-4312-95f8-ed22b25fe575" />
+<h2>Tài khoản</h2>
+    
++ Tài khoản: duong
++ Mật khẩu: 1
++ Tài khoản: bac
++ Mật khẩu: 2
++ Tài khoản: huy
++ Mật khẩu: 3
 
 
 ## Github: [https://github.com/trongduongtkhd/nhom10-OOPNO5](https://github.com/trongduongtkhd/nhom10-OOPNO5)
