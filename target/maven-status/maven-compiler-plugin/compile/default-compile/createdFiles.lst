@@ -32,7 +32,6 @@ com\mycompany\quanlyphonggym\controller\MemberController$CancelSearchResidentLis
 com\mycompany\quanlyphonggym\view\GymMemberView$13.class
 com\mycompany\quanlyphonggym\view\GymMemberView$6.class
 com\mycompany\quanlyphonggym\controller\PTController$StatisticClearListener.class
-com\mycompany\quanlyphonggym\QuanLyDoiTuong\QuanLyDoiTuongDacBiet.class
 com\mycompany\quanlyphonggym\controller\PTController$CancelDialogSearchPTListener.class
 com\mycompany\quanlyphonggym\controller\PTController$SortPT_IDListener.class
 com\mycompany\quanlyphonggym\view\ManagerView$21.class
@@ -68,7 +67,6 @@ com\mycompany\quanlyphonggym\action\CheckLogin.class
 com\mycompany\quanlyphonggym\view\ManagerView$2.class
 com\mycompany\quanlyphonggym\view\GymMemberView$RoundedBorder.class
 com\mycompany\quanlyphonggym\view\GymMemberView$15.class
-com\mycompany\quanlyphonggym\QuanLyDoiTuong\QuanLyDoiTuongDacBiet$1.class
 com\raven\chart\blankchart\SeriesSize.class
 com\mycompany\quanlyphonggym\view\ManagerView$4.class
 com\mycompany\quanlyphonggym\view\ManagerView.class
@@ -84,6 +82,7 @@ com\raven\chart\ModelLegend.class
 com\mycompany\quanlyphonggym\view\ManagerView$13.class
 com\mycompany\quanlyphonggym\view\ManagerView$MyRenderer.class
 com\mycompany\quanlyphonggym\controller\MemberController$UndoListener.class
+com\mycompany\quanlyphonggym\QuanLyPhongGym\QuanLyPhongGym.class
 com\mycompany\quanlyphonggym\view\ManagerView$10.class
 com\mycompany\quanlyphonggym\action\ManagerMember$1.class
 com\mycompany\quanlyphonggym\controller\PTController$CancelSearchPTListener.class
@@ -127,6 +126,7 @@ com\mycompany\quanlyphonggym\view\ManagerView$24.class
 com\mycompany\quanlyphonggym\view\ManagerView$5.class
 com\mycompany\quanlyphonggym\view\LoginView$1.class
 com\mycompany\quanlyphonggym\controller\PTController$StatisticPTTypeListener.class
+com\mycompany\quanlyphonggym\QuanLyPhongGym\QuanLyPhongGym$1.class
 com\raven\main\Main$3.class
 com\mycompany\quanlyphonggym\entity\Person.class
 com\mycompany\quanlyphonggym\view\MainView.class

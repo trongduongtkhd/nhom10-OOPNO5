@@ -56,7 +56,6 @@ public class LoginView extends javax.swing.JFrame
         jMenuItem2 = new javax.swing.JMenuItem();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextPane1 = new javax.swing.JTextPane();
-        quanLyDoiTuongDacBiet1 = new com.mycompany.quanlyphonggym.QuanLyDoiTuong.QuanLyDoiTuongDacBiet();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         lblAvatar = new javax.swing.JLabel();
@@ -91,7 +90,7 @@ public class LoginView extends javax.swing.JFrame
         jScrollPane1.setViewportView(jTextPane1);
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Quản lý phòng Gym");
+        setTitle("Quản lý phòng Gyms");
         setBackground(new java.awt.Color(204, 51, 255));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setIconImages(null);
@@ -307,7 +306,6 @@ public class LoginView extends javax.swing.JFrame
     private javax.swing.JTextPane jTextPane1;
     private javax.swing.JLabel lblAvatar;
     private javax.swing.JPasswordField passwordField;
-    private com.mycompany.quanlyphonggym.QuanLyDoiTuong.QuanLyDoiTuongDacBiet quanLyDoiTuongDacBiet1;
     private javax.swing.JFormattedTextField userNameField;
     // End of variables declaration//GEN-END:variables
 

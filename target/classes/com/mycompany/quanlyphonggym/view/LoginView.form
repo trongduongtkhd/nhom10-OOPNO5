@@ -47,8 +47,6 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="com.mycompany.quanlyphonggym.QuanLyDoiTuong.QuanLyDoiTuongDacBiet" name="quanLyDoiTuongDacBiet1">
-    </Component>
   </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
