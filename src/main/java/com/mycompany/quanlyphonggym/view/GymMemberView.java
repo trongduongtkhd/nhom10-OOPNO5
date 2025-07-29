@@ -180,11 +180,11 @@ public class GymMemberView extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel16 = new javax.swing.JLabel();
         btnCancelSearch = new javax.swing.JButton();
-        FieldSumCMND = new javax.swing.JTextField();
+        
         btnSort = new javax.swing.JButton();
         btnResidentUndo = new javax.swing.JButton();
         btnSearch = new javax.swing.JButton();
-        FieldSumCCCD = new javax.swing.JTextField();
+        
         jLabel14 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -205,7 +205,7 @@ public class GymMemberView extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         
         jLabel2 = new javax.swing.JLabel();
-        ComboBoxCMT = new javax.swing.JComboBox<>();
+        
         jScrollPane2 = new javax.swing.JScrollPane();
         TextAreaAddress = new javax.swing.JTextArea();
         jLabel4 = new javax.swing.JLabel();
@@ -365,14 +365,7 @@ public class GymMemberView extends javax.swing.JFrame {
         });
         btnCancelSearch.setEnabled(false);
 
-        FieldSumCMND.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        FieldSumCMND.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        FieldSumCMND.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 51, 102)));
-        FieldSumCMND.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FieldSumCMNDActionPerformed(evt);
-            }
-        });
+       
 
         btnSort.setBackground(new java.awt.Color(0, 0, 102));
         btnSort.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
@@ -418,15 +411,7 @@ public class GymMemberView extends javax.swing.JFrame {
             }
         });
 
-        FieldSumCCCD.setEditable(false);
-        FieldSumCCCD.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        FieldSumCCCD.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        FieldSumCCCD.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 0, 0, new java.awt.Color(0, 51, 102)));
-        FieldSumCCCD.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                FieldSumCCCDActionPerformed(evt);
-            }
-        });
+       
 
         ImageIcon imageIcon = new ImageIcon("src/main/java/com/mycompany/quanlyphonggym/view/logo.png");
         Image image = imageIcon.getImage().getScaledInstance(100,100, Image.SCALE_SMOOTH);
@@ -435,13 +420,13 @@ public class GymMemberView extends javax.swing.JFrame {
         jLabel14.setOpaque(false);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabel3.setText("Số người có CCCD:");
+        
 
         jLabel12.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         jLabel12.setText("Tổng số gói tập:");
 
         jLabel13.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabel13.setText("Số người có CMND:");
+        
 
         FieldSumFamily.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
         FieldSumFamily.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -464,7 +449,7 @@ public class GymMemberView extends javax.swing.JFrame {
         });
 
         jLabel15.setFont(new java.awt.Font("Times New Roman", 1, 16)); // NOI18N
-        jLabel15.setText("Số người có định danh:");
+        
 
         CheckBoxSortID.setBackground(new java.awt.Color(0, 102, 204, 175));
         btnGroupSort.add(CheckBoxSortID);
@@ -532,11 +517,11 @@ public class GymMemberView extends javax.swing.JFrame {
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(FieldSumCMND, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                )
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(FieldSumCCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                               
                                 .addGap(16, 16, 16))
                             .addGroup(jPanel2Layout.createSequentialGroup()
                                 .addComponent(jLabel12)
@@ -581,11 +566,11 @@ public class GymMemberView extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 21, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FieldSumCCCD, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    )
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(FieldSumCMND, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    )
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -595,10 +580,7 @@ public class GymMemberView extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        FieldSumCMND.setOpaque(false);
-        FieldSumCMND.setEditable(false);
-        FieldSumCCCD.setOpaque(false);
-        FieldSumCCCD.setEditable(false);
+        
         FieldSumFamily.setOpaque(false);
         FieldSumFamily.setEditable(false);
         FieldSum.setOpaque(false);
@@ -944,13 +926,9 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
         // TODO add your handling code here:
     }//GEN-LAST:event_FieldSumFamilyActionPerformed
 
-    private void FieldSumCCCDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FieldSumCCCDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FieldSumCCCDActionPerformed
+  
 
-    private void FieldSumCMNDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FieldSumCMNDActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_FieldSumCMNDActionPerformed
+   
 
     private void FieldSumDDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FieldSumDDActionPerformed
         // TODO add your handling code here:
@@ -1014,7 +992,7 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
     
     public GymMember getResidentInfo() {
         // validate residents
-        if (!validateName() || !validateSex() || !validateBirthday() || !validateAddress() || !validateTypeCMT() || !validateCMT()) {
+        if (!validateName() || !validateSex() || !validateBirthday() || !validateAddress() || !validateCMT()) {
             return null;
         }
         try {
@@ -1034,7 +1012,7 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
             //residents.setYear(Integer.parseInt(FieldYear.getText().trim()));
             residents.setAddress(capitalizeWords(TextAreaAddress.getText().trim()));
             residents.setBirthday(BirthdayChooser.getDate());
-            residents.setTypeCMT(ComboBoxCMT.getSelectedItem().toString().trim());
+            
             residents.setCMT(FieldCMT.getText().trim());
             residents.setBirthPlace(capitalizeWords(FieldBirthPlace.getText().trim()));
             residents.setPhoneNumber(FieldPhone.getText().trim());           
@@ -1096,15 +1074,7 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
         return true;
     }
     
-    private boolean validateTypeCMT() {
-        String type = ComboBoxCMT.getSelectedItem().toString().trim();
-        if (type.equals("<none>")) {
-            ComboBoxCMT.requestFocus();
-            showMessage("Bạn chưa chọn loại chứng minh thư");
-            return false;
-        }
-        return true;
-    }
+    
     
     private boolean validateAddress() {
         String address = TextAreaAddress.getText();
@@ -1176,7 +1146,7 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
             CheckBoxMale.setSelected(false);
             CheckBoxFemale.setSelected(false);
         }
-        ComboBoxCMT.setSelectedItem(""+resident.getTypeCMT());
+       
         FieldCMT.setText(resident.getCMT());
         // enable Edit and Delete buttons
         btnEdit.setEnabled(true);
@@ -1213,7 +1183,7 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
                     CheckBoxMale.setSelected(false);
                     CheckBoxFemale.setSelected(false);
                 }
-                ComboBoxCMT.setSelectedItem(selectedResident.getTypeCMT());
+                
                 FieldCMT.setText(selectedResident.getCMT());
                 // enable Edit and Delete buttons
                 btnEdit.setEnabled(true);
@@ -1264,7 +1234,7 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
         //FieldOpeningDate.setText("");
         CheckBoxMale.setSelected(false);
         CheckBoxFemale.setSelected(false);
-        ComboBoxCMT.setSelectedItem("<none>");
+        
         FieldCMT.setText("");
         FieldBirthPlace.setText("");
         FieldPhone.setText("");
@@ -1310,12 +1280,8 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
 
             // Tìm trường tương ứng với loại CMT và gán giá trị
             switch (typeCMT) {
-                case "CMND":
-                    FieldSumCMND.setText(String.valueOf(count));
-                    break;
-                case "CCCD":
-                    FieldSumCCCD.setText(String.valueOf(count));
-                    break;
+               
+                
                 case "Định danh":
                     FieldSumDD.setText(String.valueOf(count));
                     break;
@@ -1453,7 +1419,7 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JCheckBox CheckBoxSortIDFamily;
     private javax.swing.JCheckBox CheckBoxSortName;
     private javax.swing.JCheckBox CheckBoxYear;
-    private javax.swing.JComboBox<String> ComboBoxCMT;
+    
     private javax.swing.JComboBox<String> ComboBoxRole;
     private javax.swing.JTextField FieldBirthPlace;
     private javax.swing.JTextField FieldCMT;
@@ -1463,8 +1429,7 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
     private javax.swing.JTextField FieldPhone;
     private javax.swing.JTextField FieldSearch;
     private javax.swing.JTextField FieldSum;
-    private javax.swing.JTextField FieldSumCCCD;
-    private javax.swing.JTextField FieldSumCMND;
+    
     private javax.swing.JTextField FieldSumDD;
     private javax.swing.JTextField FieldSumFamily;
     private javax.swing.JDialog SearchDialog;

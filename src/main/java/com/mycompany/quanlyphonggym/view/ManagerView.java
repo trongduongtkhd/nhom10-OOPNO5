@@ -47,7 +47,7 @@ public class ManagerView extends javax.swing.JFrame {
     private byte[] specialPerson_image=null;
     private byte[] image=null;
     private String [] columnNames = new String [] {
-        "STT", "Họ và tên", "Năm sinh", "Quê quán", "Ngày mở hồ sơ", "Chuyên môn","Lịch làm việc","Ảnh"};
+        "ID", "Họ và tên", "Năm sinh", "Quê quán", "Ngày mở hồ sơ", "Chuyên môn","Lịch làm việc","Ảnh"};
     private String [] columnNames2 = new String [] {
         "<none>","Số lượng"};
     private Object data = new Object [][] {};
@@ -400,7 +400,7 @@ public class ManagerView extends javax.swing.JFrame {
         btnStatisticType.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         btnStatisticType.setForeground(new java.awt.Color(255, 255, 255));
         btnStatisticType.setIcon(new ImageIcon("src/main/java/com/mycompany/quanlyphonggym/view/People.png"));
-        btnStatisticType.setText("Loại đối tượng");
+        btnStatisticType.setText("Chuyên môn");
         btnStatisticType.setBorder(null);
         btnStatisticType.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnStatisticType.addActionListener(new java.awt.event.ActionListener() {

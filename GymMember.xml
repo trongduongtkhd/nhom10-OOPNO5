@@ -9,8 +9,8 @@
         <sex>Nam</sex>
         <GoiTap>MMA</GoiTap>
         <birthPlace>Tứ Kỳ</birthPlace>
-        <typeCMT>CCCD</typeCMT>
-        <CMT>03020500</CMT>
+        <typeCMT>&lt;none&gt;</typeCMT>
+        <CMT>111</CMT>
         <phoneNumber>0234241353</phoneNumber>
     </residents>
     <residents>
@@ -22,8 +22,60 @@
         <sex>Nam</sex>
         <GoiTap>Boxing</GoiTap>
         <birthPlace>Hải Dương</birthPlace>
-        <typeCMT>CMND</typeCMT>
-        <CMT>03020521332</CMT>
+        <typeCMT>&lt;none&gt;</typeCMT>
+        <CMT>122</CMT>
         <phoneNumber>039325435</phoneNumber>
+    </residents>
+    <residents>
+        <address>Hoàng Mai</address>
+        <birthday>2025-07-21T12:35:36.276+07:00</birthday>
+        <id>3</id>
+        <name>Hoàng Thùy Linh</name>
+        <IDMember>6 tháng</IDMember>
+        <sex>Nữ</sex>
+        <GoiTap>Gym</GoiTap>
+        <birthPlace>Minh Đức</birthPlace>
+        <typeCMT>&lt;none&gt;</typeCMT>
+        <CMT>333</CMT>
+        <phoneNumber>0982388373</phoneNumber>
+    </residents>
+    <residents>
+        <address>Cầu Giấy</address>
+        <birthday>2025-07-25T12:40:06.398+07:00</birthday>
+        <id>4</id>
+        <name>Nguyễn Trọng Hiếu</name>
+        <IDMember>12 tháng</IDMember>
+        <sex>Nữ</sex>
+        <GoiTap>Yoga</GoiTap>
+        <birthPlace>Mép</birthPlace>
+        <typeCMT>&lt;none&gt;</typeCMT>
+        <CMT>134</CMT>
+        <phoneNumber>0932854293</phoneNumber>
+    </residents>
+    <residents>
+        <address>Đô Nghĩa</address>
+        <birthday>2025-07-12T12:42:14.774+07:00</birthday>
+        <id>5</id>
+        <name>Phạm Văn Hoàng</name>
+        <IDMember>6 tháng</IDMember>
+        <sex>Nữ</sex>
+        <GoiTap>Boxing</GoiTap>
+        <birthPlace>Bắc Ninh</birthPlace>
+        <typeCMT>&lt;none&gt;</typeCMT>
+        <CMT>211</CMT>
+        <phoneNumber>0943538843</phoneNumber>
+    </residents>
+    <residents>
+        <address>Kim Giang</address>
+        <birthday>2025-07-27T12:44:46.331+07:00</birthday>
+        <id>6</id>
+        <name>Phạm Văn Huy</name>
+        <IDMember>1 tháng</IDMember>
+        <sex>Nam</sex>
+        <GoiTap>MMA</GoiTap>
+        <birthPlace>Hà Nội</birthPlace>
+        <typeCMT>&lt;none&gt;</typeCMT>
+        <CMT>345</CMT>
+        <phoneNumber>03453634323</phoneNumber>
     </residents>
 </GymMember>

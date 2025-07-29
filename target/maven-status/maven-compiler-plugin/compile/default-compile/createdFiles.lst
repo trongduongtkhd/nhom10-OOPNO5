@@ -13,7 +13,6 @@ com\mycompany\quanlyphonggym\controller\PTController$AddPTListener.class
 com\mycompany\quanlyphonggym\entity\PersonalTrainer.class
 com\mycompany\quanlyphonggym\controller\LoginController$LoginListener.class
 com\mycompany\quanlyphonggym\controller\PTController$EditPTListener.class
-com\mycompany\quanlyphonggym\view\GymMemberView$24.class
 com\raven\main\Main$1.class
 com\mycompany\quanlyphonggym\action\ManagerMember$3.class
 com\mycompany\quanlyphonggym\controller\MemberController$AddResidentListener.class
@@ -37,7 +36,6 @@ com\mycompany\quanlyphonggym\QuanLyDoiTuong\QuanLyDoiTuongDacBiet.class
 com\mycompany\quanlyphonggym\controller\PTController$CancelDialogSearchPTListener.class
 com\mycompany\quanlyphonggym\controller\PTController$SortPT_IDListener.class
 com\mycompany\quanlyphonggym\view\ManagerView$21.class
-com\mycompany\quanlyphonggym\view\GymMemberView$23.class
 com\mycompany\quanlyphonggym\view\MainView$2.class
 com\mycompany\quanlyphonggym\controller\MemberController$ListResidentsSelectionListener.class
 com\mycompany\quanlyphonggym\controller\PTController$ListPTSelectionListener.class
