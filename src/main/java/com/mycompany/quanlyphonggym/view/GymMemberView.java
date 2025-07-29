@@ -42,7 +42,7 @@ public class GymMemberView extends javax.swing.JFrame {
      * Creates new form ResidentView
      */
     private String [] columnNames = new String [] {
-        "STT", "Gói tập", "Địa chỉ", "Loại thành viên", "Họ và tên", "Ngày sinh", "Liên hệ","Loại CMT","số CMT","Quê quán"};
+        "STT", "Gói tập", "Địa chỉ", "Loại thành viên", "Họ và tên", "Ngày sinh", "Liên hệ","ID","Quê quán"};
     private SimpleDateFormat fDate=new SimpleDateFormat("dd/MM/yyyy");
     FlowLayout flowLayout = new FlowLayout();
     public GymMemberView() {
@@ -615,18 +615,18 @@ public class GymMemberView extends javax.swing.JFrame {
         tableResident.setFont(new java.awt.Font("Times New Roman", 0, 18)); // NOI18N
         tableResident.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null},
-                {null, null, null, null, null, null, null,null,null,null}
+                {null, null, null, null, null, null, null, null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null},
+                {null, null, null, null, null, null, null,null,null}
             }, columnNames
         ));
         tableResident.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_LAST_COLUMN);
@@ -676,11 +676,11 @@ public class GymMemberView extends javax.swing.JFrame {
         jPanel1.add(jLabel2);
         jLabel2.setBounds(900, 170, 70, 40);
 
-        ComboBoxCMT.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
-        ComboBoxCMT.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "<none>", "CCCD", "CMND", "Định danh" }));
-        jPanel1.add(ComboBoxCMT);
-        ComboBoxCMT.setBounds(830, 250, 130, 40);
-        ComboBoxRole.setOpaque(false);
+        JLabel lblIDHoiVien = new JLabel("ID hội viên:");
+        lblIDHoiVien.setFont(new java.awt.Font("Times New Roman", 0, 20));
+        jPanel1.add(lblIDHoiVien);
+        lblIDHoiVien.setBounds(870, 250, 130, 40);
+
 
         TextAreaAddress.setBackground(new java.awt.Color(255, 255, 255, 0));
         TextAreaAddress.setColumns(20);
@@ -1145,9 +1145,9 @@ private void FieldIDFamilyActionPerformed(java.awt.event.ActionEvent evt) {
             residents[i][4] = list.get(i).getName();
             residents[i][5] = fDate.format(list.get(i).getBirthday());
             residents[i][6] = list.get(i).getPhoneNumber();
-            residents[i][7] = list.get(i).getTypeCMT(); 
-             residents[i][8] = list.get(i).getCMT();       
-        residents[i][9] = list.get(i).getBirthPlace(); 
+            // residents[i][7] = list.get(i).getTypeCMT(); 
+             residents[i][7] = list.get(i).getCMT();       
+        residents[i][8] = list.get(i).getBirthPlace(); 
         }
         //jLabel1.setLayout(null);
         tableResident.getColumnModel().getColumn(0).setWidth(3);
